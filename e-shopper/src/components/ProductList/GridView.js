@@ -6,7 +6,7 @@ const GridView = ({ products }) => {
   return (
     <Wrapper className="section">
       <div className="container grid grid-three-column">
-        {products.map((curElem) => {
+        {products.map(curElem => {
           return <Product key={curElem.id} {...curElem} />;
         })}
       </div>
@@ -59,7 +59,7 @@ const Wrapper = styled.section`
   }
 
   .card {
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: ${({ theme }) => theme?.colors?.bg};
     border-radius: 1rem;
 
     .card-data {
@@ -74,11 +74,11 @@ const Wrapper = styled.section`
     }
 
     .card-data--price {
-      color: ${({ theme }) => theme.colors.helper};
+      color: ${({ theme }) => theme?.colors?.helper};
     }
 
     h3 {
-      color: ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme?.colors?.text};
       text-transform: capitalize;
     }
 

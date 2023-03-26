@@ -9,12 +9,12 @@ const FilterSection = () => {
     filters: { text, category, color, price, maxPrice, minPrice },
     updateFilterValue,
     all_products,
-    clearFilters,
+    clearFilters
   } = useFilterContext();
 
   // get the unique values of each property
   const getUniqueData = (data, attr) => {
-    let newVal = data.map((curElem) => {
+    let newVal = data.map(curElem => {
       return curElem[attr];
     });
 
@@ -38,14 +38,8 @@ const FilterSection = () => {
   return (
     <Wrapper>
       <div className="filter-search">
-        <form onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="text"
-            name="text"
-            placeholder="Search"
-            value={text}
-            onChange={updateFilterValue}
-          />
+        <form onSubmit={e => e.preventDefault()}>
+          <input type="text" name="text" placeholder="Search" value={text} onChange={updateFilterValue} />
         </form>
       </div>
 
@@ -54,13 +48,7 @@ const FilterSection = () => {
         <div>
           {categoryData.map((curElem, index) => {
             return (
-              <button
-                key={index}
-                type="button"
-                name="category"
-                value={curElem}
-                className={curElem === category ? "active" : ""}
-                onClick={updateFilterValue}>
+              <button key={index} type="button" name="category" value={curElem} className={curElem === category ? "active" : ""} onClick={updateFilterValue}>
                 {curElem}
               </button>
             );
@@ -72,11 +60,7 @@ const FilterSection = () => {
         <h3>Company</h3>
 
         <form action="#">
-          <select
-            name="company"
-            id="company"
-            className="filter-company--select"
-            onClick={updateFilterValue}>
+          <select name="company" id="company" className="filter-company--select" onClick={updateFilterValue}>
             {companyData.map((curElem, index) => {
               return (
                 <option key={index} value={curElem} name="company">
@@ -95,13 +79,7 @@ const FilterSection = () => {
           {colorsData.map((curColor, index) => {
             if (curColor === "all") {
               return (
-                <button
-                  key={index}
-                  type="button"
-                  value={curColor}
-                  name="color"
-                  className="color-all--style"
-                  onClick={updateFilterValue}>
+                <button key={index} type="button" value={curColor} name="color" className="color-all--style" onClick={updateFilterValue}>
                   all
                 </button>
               );
@@ -114,7 +92,8 @@ const FilterSection = () => {
                 name="color"
                 style={{ backgroundColor: curColor }}
                 className={color === curColor ? "btnStyle active" : "btnStyle"}
-                onClick={updateFilterValue}>
+                onClick={updateFilterValue}
+              >
                 {color === curColor ? <FaCheck className="checkStyle" /> : null}
               </button>
             );
@@ -127,14 +106,7 @@ const FilterSection = () => {
         <p>
           <FormatPrice price={price} />
         </p>
-        <input
-          type="range"
-          name="price"
-          min={minPrice}
-          max={maxPrice}
-          value={price}
-          onChange={updateFilterValue}
-        />
+        <input type="range" name="price" min={minPrice} max={maxPrice} value={price} onChange={updateFilterValue} />
       </div>
 
       <div className="filter-clear">
@@ -173,18 +145,18 @@ const Wrapper = styled.section`
 
       button {
         border: none;
-        background-color: ${({ theme }) => theme.colors.white};
+        background-color: ${({ theme }) => theme?.colors?.white};
         text-transform: capitalize;
         cursor: pointer;
 
         &:hover {
-          color: ${({ theme }) => theme.colors.btn};
+          color: ${({ theme }) => theme?.colors?.btn};
         }
       }
 
       .active {
         border-bottom: 1px solid #000;
-        color: ${({ theme }) => theme.colors.btn};
+        color: ${({ theme }) => theme?.colors?.btn};
       }
     }
   }
@@ -192,7 +164,7 @@ const Wrapper = styled.section`
   .filter-company--select {
     padding: 0.3rem 1.2rem;
     font-size: 1.6rem;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme?.colors?.text};
     text-transform: capitalize;
   }
 
