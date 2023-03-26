@@ -1,0 +1,72 @@
+const date = `${new Date().toLocaleDateString("en-IN", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+})}`;
+
+export const productListData = [
+  {
+    id: "prod1",
+    name: "OnePlus Nord 5G (Blue Marble, 12GB RAM, 128GB Storage)",
+    rating: 5,
+    orderCount: "20,345",
+    price: 25999,
+    imgPath: "/images/products/product_1.jpg",
+    delivery: date,
+  },
+  {
+    id: "prod2",
+    name: "OnePlus 8T 5G (Aquamarine Green, 8GB RAM, 128GB Storage)",
+    rating: 4,
+    orderCount: "156",
+    price: 16499,
+    imgPath: "/images/products/product_2.jpg",
+    delivery: date,
+  },
+  {
+    id: "prod3",
+    name: "OnePlus Nord 5G (Blue Marble, 8GB RAM, 128GB Storage)",
+    rating: 4,
+    orderCount: "18,864",
+    price: 27999,
+    imgPath: "/images/products/product_3.jpg",
+    delivery: date,
+  },
+  {
+    id: "prod4",
+    name:
+      "OPPO A5 2020 (Dazzling White, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers",
+    rating: 3,
+    orderCount: "6,137",
+    price: 11990,
+    imgPath: "/images/products/product_4.jpg",
+    delivery: date,
+  },
+  {
+    id: "prod5",
+    name: "Samsung Galaxy M31s (Mirage Blue, 6GB RAM, 128GB Storage)",
+    rating: 2,
+    orderCount: "25,097",
+    price: 18499,
+    imgPath: "/images/products/product_5.jpg",
+    delivery: date,
+  },
+  {
+    id: "prod6",
+    name: "Apple iPhone 11 (64GB) - Black (Includes EarPods, Power Adapter)",
+    rating: 5,
+    orderCount: "7,336",
+    price: 49999,
+    imgPath: "/images/products/product_6.jpg",
+    delivery: date,
+  },
+  {
+    id: "prod7",
+    name: "Apple iPhone 11 (128GB) - Purple (Includes EarPods, Power Adapter)",
+    rating: 5,
+    orderCount: "7,336",
+    price: 64999,
+    imgPath: "/images/products/product_7.jpg",
+    delivery: date,
+  },
+];

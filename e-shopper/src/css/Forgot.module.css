@@ -1,0 +1,102 @@
+/* Default styles */
+.row {
+    background-color:#230042;/*3a3d6e*/
+    color: #fff;
+    text-align: center;
+    padding: 2em 2em 0.5em;
+    margin: 2em auto;
+    border-radius: 5px;
+    width: 30rem;
+    max-height: 27rem;
+}
+
+.information-text{
+    margin-bottom: 1.75rem;
+}
+
+.row h1 {
+    font-size: 2.5em;
+    margin: 25px;
+}
+
+.row .form-group {
+    margin: 0.5em 0;
+    overflow: hidden;
+}
+
+.row .form-group label {
+    display: block;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+}
+
+.row .form-group,
+.row .form-group button {
+    display: block;
+    padding: 0.5em 0;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    border: none;
+    border-bottom: 1px solid #555;
+}
+
+.row .footer h5 {
+    margin-top: 2em;
+    font-size: 13px;
+}
+
+.row .footer h6 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 12px;
+}
+
+.row .footer p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.row .footer a {
+    color: #60baaf;
+    text-decoration: none;
+}
+
+.txt-danger {
+    /* border: 1px solid red; */
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #dc3545 !important;
+    margin-top: -17px;
+    margin-bottom: 6px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 600px) {
+    .row {
+        width: auto;
+        margin: 1em;
+        height: auto;
+    }
+}
+
+/* Media query for screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .row {
+        width: 50%;
+        margin: 1em auto;
+    }
+}
+
+/* Media query for screens larger than 1024px */
+@media (min-width: 1025px) {
+    .row {
+        width: 30rem;
+        margin: 2em auto;
+    }
+}
